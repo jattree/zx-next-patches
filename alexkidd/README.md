@@ -136,7 +136,8 @@ match MAME after them.
 ## Tested on
 
 - ZEsarUX 13.0 (TBBlue): the comparison above and the project's play tests.
-- `<TO FILL: Tang Nano 20K with the NextNano core, core version, date, what was played>`
+- A Tang Nano 20K FPGA board running the NextNano core (a ZX Spectrum Next core), 2026-10-13:
+  plays well. That test was of the build just before the title-screen credit was added.
 - Not yet tried on a ZX Spectrum Next itself or a Nextcade cabinet.
 - The patch was applied with Rom Patcher JS's own library (github.com/marcrobledo/RomPatcher.js,
   as of 2026-08-28, the code its web page runs) with checksum validation on: the result is
