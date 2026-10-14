@@ -1,5 +1,21 @@
 # Alex Kidd in Miracle World for the ZX Spectrum Next: changelog
 
+## 1.5.1 (2026-10-14)
+
+A fix to the conversion; the game plays exactly as 1.5.
+
+- Fixed a rare black screen after a screen change. On the Next, the frame interrupt could arrive
+  halfway through the conversion's handling of one of the game's video writes, which a real
+  Master System never allows. At the moment the game turns the display back on (after a death,
+  a level or a room change) that could lose the write and leave the screen black, with the game
+  still running, until the next screen change. The interrupt now waits until the write is done,
+  as on the Master System. Found while porting another game with the same layer; measured in
+  MAME across every level and game state, with odds of very roughly one in a few thousand
+  screen changes.
+- The title credit and the start menu say 1.5.1.
+- SD saves made by 1.5 are refused by 1.5.1 (each build only loads its own); quick saves in memory
+  are unaffected.
+
 ## 1.5 (2026-10-13)
 
 The first release. Made from the Master System cartridge, Rev 1.

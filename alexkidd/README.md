@@ -1,6 +1,7 @@
 # Alex Kidd in Miracle World for the ZX Spectrum Next
 
-Sega's 1986 Master System game, running on the ZX Spectrum Next as an improved "version 1.5".
+Sega's 1986 Master System game, running on the ZX Spectrum Next as an improved "version 1.5"
+(this is release 1.5.1, a fix to the conversion; see `CHANGELOG.md`).
 The game's own Z80 code runs on the Next; a small hardware layer written for this project
 stands in for the Master System's video chip, sound chip, joypad and cartridge banking.
 
@@ -33,7 +34,7 @@ Patchers name the output after the ROM, so it will end in `.sms` until you renam
 - **Floating IPS (Flips):** Windows, Linux or macOS. "Apply Patch", and save as `alexkidd.nex`.
 
 The finished file is 180,736 bytes, SHA-256
-`f5ada509cec3c2e6c02f298bbe7efbd39e3c1d630327355aeab957cf1d943424`.
+`f430571ca3f5eb1a7080d2c3c391edd475590fa56271b09c1301f0db67e7bec2`.
 
 ## Play
 
@@ -114,7 +115,7 @@ it.
 - Sprites never flicker: the Master System's 8-sprites-per-line limit doesn't exist on the Next,
   so the game's flicker workaround is undone.
 - The title screen carries a credit in the border below the picture ("ZX SPECTRUM NEXT
-  ENHANCED V1.5" and the website). The game's own title, PUSH START BUTTON and Sega copyright are
+  ENHANCED V1.5.1" and the website). The game's own title, PUSH START BUTTON and Sega copyright are
   untouched.
 - Background that sits in front of sprites on the Master System does so here too: the dialogue
   boxes hide the bosses behind them, for example.
@@ -138,6 +139,10 @@ match MAME after them.
 - ZEsarUX 13.0 (TBBlue): the comparison above and the project's play tests.
 - A Tang Nano 20K FPGA board running the NextNano core (a ZX Spectrum Next core), 2026-10-13:
   plays well. That test was of the build just before the title-screen credit was added.
+- 1.5.1 (2026-10-14), on ZEsarUX 13.0: the picture comparison with MAME again (7 frames
+  across the attract demos, all identical) and the project's play tests (janken, continue,
+  options, pause, quick save and load) pass; the patch gives the same `.nex` in Rom Patcher JS's
+  library.
 - Not yet tried on a ZX Spectrum Next itself or a Nextcade cabinet.
 - The patch was applied with Rom Patcher JS's own library (github.com/marcrobledo/RomPatcher.js,
   as of 2026-08-28, the code its web page runs) with checksum validation on: the result is

@@ -9,7 +9,7 @@ the exact version it was made for.
 
 | Game | Original | Folder | Version |
 | --- | --- | --- | --- |
-| Alex Kidd in Miracle World | Sega Master System, 1986 | [`alexkidd/`](alexkidd/) | 1.5 |
+| Alex Kidd in Miracle World | Sega Master System, 1986 | [`alexkidd/`](alexkidd/) | 1.5.1 |
 
 ## Applying a patch
 
